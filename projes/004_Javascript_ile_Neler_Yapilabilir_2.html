@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2 id="hiki" class="stil">Merhaba dünya nasılsın</h2>
+    <input type="button" value="Rengini değiştir" onclick="changeColor()" />
+
+
+    <style>
+        .stil {
+            color: green;
+        }
+    </style>
+    <script>
+        function changeColor() {
+            if (document.getElementById('hiki').style.color == "green") {
+                document.getElementById('hiki').style.color = "red";
+            }
+            else {
+                document.getElementById('hiki').style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>
