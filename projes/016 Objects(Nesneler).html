@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <p id="result"></p>
+    <p id="result2"></p>
+
+    <script>
+        var car={
+            name: "Renault",
+            model: "Clio 4",
+            color: "White",
+            start: function () {
+                return this.name + " " + this.model + " çalıştı.";
+            },
+            stop: function () {
+                return this.name + " " + this.model + " durdu";
+            }
+        };
+
+        
+        document.getElementById("result").innerHTML = car.start();
+  
+        document.getElementById("result2").innerHTML = car["stop"]();
+    </script>
+</body>
+</html>
