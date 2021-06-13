@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+
+
+
+
+    <script>
+        printScreen();
+        function printScreen() {
+            var text = "Javascript, Angular JS, React Js, Vue JS, Node JS";
+
+            document.getElementById("result").innerHTML = text.search("JS");
+
+            document.getElementById("result2").innerHTML = text.slice(12, 22);
+
+            document.getElementById("result3").innerHTML = text.slice(12);
+
+            document.getElementById("result4").innerHTML = text.substr(12, 7);
+
+            document.getElementById("result5").innerHTML = text.replace("JS", "Değişti");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+        <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <p id="result5"></p>
+        <p id="result6"></p>
+        <p id="result7"></p>
+        <p id="result8"></p>
+
+
+
+    <script>
+        printScreen();
+        function printScreen() {
+            var text = "Javascript Angular JS, React JS, Vue JS, Node JS";
+            var text1 = "Merhaba";
+            var text2 = "Dünya";
+
+            document.getElementById("result").innerHTML = text.replace(/js/i, "Değişti");
+
+            document.getElementById("result2").innerHTML = text.replace(/js/gi, "Değişti");
+
+            document.getElementById("result3").innerHTML = text.toUpperCase();
+
+            document.getElementById("result4").innerHTML = text.toLowerCase();
+
+            document.getElementById("result5").innerHTML = text1.concat(" ", text2);
+
+            document.getElementById("result6").innerHTML = text.charAt(5);
+
+            document.getElementById("result7").innerHTML = text.charCodeAt(5);
+
+            var arraylist = text.split(", ");
+            document.getElementById("result8").innerHTML = arraylist[0] + arraylist[3];
+        }
+    </script>
+</body>
+</html>
