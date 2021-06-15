@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <div id="result6"></div>
+    <div id="result7"></div>
+
+
+    <script>
+        var x = new Date();
+
+        document.getElementById("result").innerHTML = x.getDate();
+        document.getElementById("result2").innerHTML = x.getDay();
+        document.getElementById("result3").innerHTML = x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+        document.getElementById("result4").innerHTML = x.getMilliseconds();
+        document.getElementById("result5").innerHTML = x.getMonth();
+        document.getElementById("result6").innerHTML = x.getTime();
+
+        var y = new Date();
+        y.setDate("23");
+        y.setHours("15");
+        y.setMinutes("47");
+        document.getElementById("result7").innerHTML = y;
+    </script>
+</body>
+</html>

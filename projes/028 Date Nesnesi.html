@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+
+
+    <script>
+        show();
+        function show() {
+            var x = new Date();
+            var y = new Date(86400000);
+            var z = new Date(87,4,29,22,0,55);
+
+            document.getElementById("result").innerHTML = x;
+            document.getElementById("result2").innerHTML = y;
+            document.getElementById("result3").innerHTML = z;
+            document.getElementById("result4").innerHTML = z.toUTCString();
+            document.getElementById("result5").innerHTML = z.toDateString();
+        }
+    </script>
+</body>
+</html>
