@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div><hr />
+    <div id="result2"></div><hr />
+    <div id="result3"></div><hr />
+    <div id="result4"></div><hr />
+
+
+    <script>
+        show();
+        function show() {
+            var x = 8;
+            var y = x.toString();
+            var z = 42.5260
+
+
+            document.getElementById("result").innerHTML = typeof y;
+            document.getElementById("result2").innerHTML = z.toExponential() + "<br>" +
+                z.toExponential(2) + "<br>" +
+                z.toExponential(4) + "<br>" +
+                z.toExponential(6) + "<br>";
+            document.getElementById("result3").innerHTML = z.toFixed() + "<br>" +
+                z.toFixed(2) + "<br>" +
+                z.toFixed(4) + "<br>" +
+                z.toFixed(6) + "<br>";
+            document.getElementById("result4").innerHTML = z.toPrecision() + "<br>" +
+                z.toPrecision(2) + "<br>" +
+                z.toPrecision(4) + "<br>" +
+                z.toPrecision(6) + "<br>";
+        }
+    </script>
+</body>
+</html>

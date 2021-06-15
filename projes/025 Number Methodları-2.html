@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+
+
+
+    <script>
+        show();
+        function show() {
+            var x = "sdsdf";
+
+            document.getElementById("result").innerHTML = x.valueOf();
+
+            document.getElementById("result2").innerHTML =
+                Number(true) + "<hr/>" +
+                Number(false) + "<hr/>" +
+                Number("8") + "<hr/>" +
+                Number("73 ") + "<hr/>" +
+                Number(" 43") + "<hr/>" +
+                Number(new Date()) + "<hr/>" +
+                Number("73 65") + "<hr/>" +
+                Number("JS") + "<hr/>";
+
+            document.getElementById("result3").innerHTML =
+                parseInt("8") + "<hr/>" +
+                parseInt("73 ") + "<hr/>" +
+                parseInt(" 43") + "<hr/>" +
+                parseInt("73 65") + "<hr/>" +
+                parseInt("7 days") + "<hr/>" +
+                parseInt("days 7") + "<hr/>" +
+                parseInt("3.14") + "<hr/>" +
+                parseInt("JS") + "<hr/>";
+
+            document.getElementById("result4").innerHTML =
+                parseFloat("8") + "<hr/>" +
+                parseFloat("73 ") + "<hr/>" +
+                parseFloat(" 43") + "<hr/>" +
+                parseFloat("73 65") + "<hr/>" +
+                parseFloat("7 days") + "<hr/>" +
+                parseFloat("days 7") + "<hr/>" +
+                parseFloat("3.14") + "<hr/>" +
+                parseFloat("JS") + "<hr/>";
+
+            document.getElementById("result5").innerHTML =
+                Number.MAX_VALUE + "<hr/>" +
+                Number.MIN_VALUE + "<hr/>" +
+                Number.NEGATIVE_INFINITY + "<hr/>" +
+                Number.POSITIVE_INFINITY + "<hr/>" +
+                Number.NaN;
+        }
+    </script>
+</body>
+</html>
