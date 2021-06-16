@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+
+
+    <script>
+        var lang = ["js", "php", "html", "css", "c#", "c++", "c", "java"];
+        var pc = { graphiccard: "Nvidia", holdtype: "SSD", processor: "intel" };
+        lang.push("python");
+
+        document.getElementById("result").innerHTML = lang;
+        document.getElementById("result2").innerHTML = lang[2];
+        document.getElementById("result3").innerHTML = pc.graphiccard;
+    </script>
+</body>
+</html>

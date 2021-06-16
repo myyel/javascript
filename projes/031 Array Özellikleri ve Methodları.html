@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+
+
+    <script>
+        var langs = [
+            "php",
+            "css",
+            "c#",
+            "c++"];
+
+        langs.pop();
+
+        langs.push("java");
+
+        langs.shift();
+
+        document.getElementById("result").innerHTML = Array.isArray(langs);
+        document.getElementById("result2").innerHTML = langs.join("-");
+    </script>
+</body>
+</html>
