@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p><input type="text" id="vize" /></p>
+    <p><input type="text" id="final" /></p>
+    <p><button type="button" onclick="note();">Sonuç</button></p>
+    <p id="result"></p>
+
+    <script>
+        function note() {
+            var vize, final, ortalama, message;
+            vize = Number(document.getElementById("vize").value);
+            final = Number(document.getElementById("final").value);
+            ortalama = (0.3 * vize) + (0.7 * final);
+
+            if (isNaN(vize)) {
+                message = "Bir sayı değerini giriniz";
+            }
+            else if (isNaN(final)) {
+                message = "Bir sayı değerini giriniz";
+            }
+            else {
+                ortalama >= 60 ? message = "Tebrikler, geçtiniz": message = "Maalesef kaldınız";
+            }
+
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

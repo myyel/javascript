@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="show();">Hangi Gün</button>
+
+    <script>
+        function show() {
+            var day;
+            var d = new Date().getDay();
+
+            switch (d) {
+                case 0: day = "Pazar"; break;
+                case 1: day = "Pazartesi"; break;
+                case 2: day = "Pazar"; break;
+                case 3: day = "Pazar"; break;
+                case 4: day = "Pazar"; break;
+                case 5: day = "Pazar"; break;
+                case 6: day = "Pazar"; break;
+
+                default: day = "Böyle bir gün yok";
+            }
+
+            document.getElementById("result").innerHTML = day;
+        }
+    </script>
+</body>
+</html>

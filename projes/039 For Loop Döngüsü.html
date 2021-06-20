@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="show();">Loop1</button>
+    <button type="button" onclick="loop();">Loop2</button>
+
+    <script>
+        function show() {
+            var i, text = "";
+
+            for (i = 0; i < 10; i++) {
+                text += i + "<br/>";
+            }
+            document.getElementById("result").innerHTML = text;       
+        }
+
+        function loop() {
+            var langs = ["Php", "Js", "Css", "C#", "C++", "Python"];
+            var text = "";
+            for (var i = 0; i < langs.length; i++) {
+                text += langs[i] + "<br/>";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

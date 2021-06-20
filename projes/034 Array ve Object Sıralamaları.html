@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+
+
+    <script>
+        var lang = ["js", "php", "html", "css", "c#", "c++", "c", "java"];
+        var lang1 = ["js", "php", "html"]
+        var numbers = [52, 63, 428, 96, 75, 120, 9];
+        var pc = [
+            {type:"Asus", ram:"16gb",year:"2018"},
+            { type: "Msı", ram: "12gb", year: "2017"},
+            { type: "Hp", ram: "32gb", year: "2019"}
+        ]
+        
+
+        document.getElementById("result").innerHTML = numbers.sort(function (x, y) { return 0.6 - Math.random(); });
+
+        document.getElementById("result2").innerHTML = Math.max.apply(null,numbers);
+                
+        document.getElementById("result3").innerHTML = Math.min.apply(null, numbers);
+
+        document.getElementById("result4").innerHTML = pc[2].ram;
+                        
+    </script>
+</body>
+</html>

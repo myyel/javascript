@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="cift();">Çift</button>
+    <button type="button" onclick="tek();">Tek</button>
+    <p><input type="text" id="sayi" /></p>
+    <button type="button" onclick="fak();">Faktöriyel</button>
+
+    <script>
+        function cift() {
+            var text = "";
+            for (i=0; i <= 10; i += 2) {
+                text += i + "<br/>";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+        function tek() {
+            var text = "";
+            for (i=1; i <= 10; i += 2) {
+                text += i + "<br/>";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+
+
+        function fak() {
+            var sayi = Number(document.getElementById("sayi").value);
+            var sonuc=1;
+
+            for (var i = 1; i <= sayi; i++) {
+                sonuc = sonuc * i;
+            }
+            document.getElementById("result").innerHTML = sonuc;
+        }
+    </script>
+</body>
+</html>
