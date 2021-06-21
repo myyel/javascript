@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="loop();">Loop</button>
+    <p id="result2"></p>
+    <button type="button" onclick="loop2();">Loop2</button>
+
+    <script>
+        function loop() {
+            var i = 0;
+            var message="";
+            while (i < 10) {
+                message += i + "<br/>";
+                i++;
+            }
+            document.getElementById("result").innerHTML = message;
+        }
+
+        function loop2() {
+            var i = 12;
+            var message="";
+            do {
+                message += i + "<br/>";
+                i++;
+
+            } while (i < 10);
+            document.getElementById("result2").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

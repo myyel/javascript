@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <input type="text" id="ins" />
+    <button type="button" onclick="loop();">Göster</button>
+    <p id="result2"></p>
+    <input type="text" id="ins2" placeholder="Sayı gir"/>
+    <button type="button" onclick="sayi();">Yaz</button>
+
+    <script>
+        function loop() {
+            var info = document.getElementById("ins").value;
+            var message = "";
+
+            switch (info) {
+
+                case "JS":
+                    message = "Javascript'e Hoşgeldiniz";
+                    break;
+                case "Bugün":
+                    message = "Bugün günlerden pazartesi";
+                    break;
+
+                default:
+                    message = "Girilen değerin bir anlamı yok";
+            }
+
+            document.getElementById("result").innerHTML = message;
+        }
+
+        function sayi() {
+            var sayi = document.getElementById("ins2").value;
+            var message = "";
+
+            for (var i = 0; i < sayi; i++) {
+                if (i == 4 || i == 7) {
+                    continue;
+                }
+                list: {
+                    message += i + "<br/>";
+                }
+            }
+            document.getElementById("result2").innerHTML = message;
+        }
+    </script>
+</body>
+</html>
