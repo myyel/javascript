@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        var x = 9;
+        var y = "3.14";
+        var z = "26"; 
+        document.getElementById("result").innerHTML =
+            String(x) + "<br/>" +
+            String(725) + "<br/>" +
+            String(10+5) + "<br/>" +
+            typeof String(x) + "<br/>" +
+            typeof String(7) + "<br/>" +
+            typeof String(10 + 5) + "<br/>" +
+
+            true.toString()+"<br/>"+
+
+            parseFloat(y) + "<br/>" +
+            typeof parseFloat(y) + "<br/>" +
+
+            parseInt(z)+"<br/>" +
+            typeof parseInt(z);
+    </script>
+</body>
+</html>
