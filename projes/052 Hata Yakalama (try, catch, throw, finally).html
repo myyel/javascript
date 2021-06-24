@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="text" id="data" />
+    <button type="button" onclick="error();">Tıkla</button>
+    <div id="result"></div>
+
+    <script>
+        function error() {
+            var message, inputValue;
+            inputValue = document.getElementById("data").value;
+            message = document.getElementById("result");
+            message.innerHTML = "";        
+        try {
+            if (inputValue == "") throw "Bu alanı boş geçemezsiniz";
+            if (isNaN(inputValue)) throw "Bu alanı bir sayı  girmelisiniz";
+            if (inputValue < 5) throw "Girilen değer 5'ten küçük olamaz";
+            if (inputValue > 15) throw "Girilen değer 15'ten büyük olamaz";
+
+        } catch (e) {
+            message.innerHTML = e;
+        }
+        finally {
+            document.getElementById("data").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

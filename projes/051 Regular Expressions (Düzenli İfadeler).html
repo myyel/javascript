@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+
+    <script>
+        var text = "Javascript ile html ve css daha iyi hükmediyor ve ekranı canlandırıyoruz. javascript web dünyasının ruhudur." +
+            "o yoksa web bir cesetten ibarettir.";
+        document.getElementById("result").innerHTML = text.search(/javascript/i);
+        document.getElementById("result2").innerHTML = text.search(/javpt/i);
+        document.getElementById("result3").innerHTML = text.replace("css", "hey");
+        document.getElementById("result4").innerHTML = text.search(/t/ig);
+        document.getElementById("result5").innerHTML = /ge/.test(text);
+    </script>
+</body>
+</html>
