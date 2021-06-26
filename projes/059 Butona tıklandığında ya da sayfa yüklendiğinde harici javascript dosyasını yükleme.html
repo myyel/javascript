@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <button id="jsOlustur">Js Oluştur</button>
+
+
+    <script>
+        window.onload = function () {
+            var getElement = document.createElement("script");
+            getElement.type = "text/javascript";
+            getElement.src = "js/message.js";
+            document.body.appendChild(getElement);
+            alert("harici js oluşturuldu");
+        }
+    </script>
+    <script>
+        var getJs = document.getElementById("jsOlustur");
+        getJs.onclick = function () {
+            var getElement = document.createElement("script");
+            getElement.type = "text/javascript";
+            getElement.src = "js/message.js";
+            document.body.appendChild(getElement);
+            alert("harici js oluşturuldu");
+        }
+    </script>
+</body>
+</html>
