@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <p>
+        <button type="button" onclick="openWindow();">Open Window</button>
+        <button type="button" onclick="resizeWindow();">Resize Window</button>
+        <button type="button" onclick="moveWindow();">Move Window</button>
+        <button type="button" onclick="closeWindow();">Close Window</button>
+        <div id="result3"></div>
+    </p>
+
+    <script>
+        var w, h, result, result2;
+        result = window.document.getElementById("result");
+        result2 = window.document.getElementById("result2");
+        w = window.innerWidth;
+        h = window.innerHeight;
+
+        result.innerHTML = "tarayıcı genişiliği: " + w;
+        result2.innerHTML = "tarayıcı yüksekliği: " + h;
+
+        var newWindow;
+        function openWindow() {
+            newWindow = window.open("", "newWindow", "widht=660, height=600");
+            newWindow.document.write("bu pencere açıldı");
+        }
+        function resizeWindow() {
+            newWindow.resizeTo(250, 250);
+        }
+        function moveWindow() {
+            newWindow.moveWindow(450, 450);
+        }
+        function closeWindow() {
+            newWindow.close();
+        }
+    </script>
+</body>
+</html>

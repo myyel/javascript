@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <br />
+    <button type="button" onclick="load()";>Yükle</button>
+
+    <script>
+        var result;
+        result = document.getElementById("result");
+        result.innerHTML = "screen.width: " + screen.width + "<br>" +
+            "screen.width: " + screen.width + "<br>" +
+            "screen.height: " + screen.height + "<br>" +
+            "screen.availWidth: " + screen.availWidth + "<br>" +
+            "screen.availHeight: " + screen.availHeight + "<br>" +
+            "screen.colorDepth: " + screen.colorDepth + "<br>" +
+            "screen.pixelDepth: " + screen.pixelDepth + "<br>" +
+            "<br>"+
+            "window.location.href: " + window.location.href + "<br>" +
+            "window.location.hostname: " + window.location.hostname + "<br>" +
+            "window.location.pathname: " + window.location.pathname + "<br>" +
+            "window.location.protocol: " + window.location.protocol + "<br>" +
+            "window.location.port: " + window.location.port + "<br>";
+
+
+        function load() {
+            window.location.assign("https://wwww.facebook.com");
+        }
+    </script>
+</body>
+</html>

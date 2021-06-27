@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button type="button" onclick="uyari();">Uyarı</button>
+    <button type="button" onclick="onay();">Onay</button>
+    <button type="button" onclick="istem();">İstem</button>
+    <div id="result"></div>
+
+    <script>
+        var result;
+        result = document.getElementById("result");
+
+
+        function uyari() {
+            alert("Uyarı");
+        }
+        function onay() {
+            if (confirm("Onaylıyor musun")) {
+                result.innerHTML = "Tebrikler";
+            }
+            else {
+                result.innerHTML = "Peki";
+            }
+        }
+        function istem() {
+            deger = prompt("Dersin Adını Giriniz");
+            if (deger == null || deger == "") {
+                result.innerHTML = "Bu alan boş geçilemez";
+            }
+            else {
+                result.innerHTML = "Tamamdır";
+            }
+        }
+    </script>
+</body>
+</html>

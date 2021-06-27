@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <p>
+        <button type="button" onclick="goBack();">Geri</button>
+        <button type="button" onclick="goForward();">İleri</button>
+    </p>
+
+    <script>
+        var result;
+        result = document.getElementById("result");
+        result.innerHTML = navigator.cookieEnabled + "<br>" +
+            navigator.appName + "<br>" +
+            navigator.appCodeName + "<br>" +
+            navigator.product + "<br>" +
+            navigator.appVersion + "<br>" +
+            navigator.userAgent + "<br>" +
+            navigator.platform + "<br>" +
+            navigator.language + "<br>" +
+            navigator.onLine + "<br>" +
+            navigator.javaEnabled() + "<br>" 
+            ;
+
+        function goBack() {
+            window.history.back();
+        }
+        function goForward() {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>
