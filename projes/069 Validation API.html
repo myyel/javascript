@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Sayılar: <input type="number" id="number" name="number" max="7" min="4" required /></p>
+    <button type="submit" onclick="validateForm();">Click</button>
+    <div id="result" style="display:none"></div>
+    <script>
+        function validateForm() {
+            var valeuForm, result;
+            result = document.getElementById("result");
+            valeuForm = document.getElementById("number");
+
+            if (valeuForm.checkValidity() == false) {
+                result.style.display = "block";
+                result.style.color = "red";
+                result.innerHTML = valeuForm.validationMessage;
+            }
+            else {
+                result.style.display = "block";
+                result.style.color = "red";
+                result.innerHTML="Herhangi bir sorun yok"
+            }
+            
+        }
+    </script>
+</body>
+</html>

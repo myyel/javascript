@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frmBegin" name="frmBegin" action="#" method="post" onsubmit="return validateForm()">
+        <p>Username: <input type="text" id="username" name="username" /></p>
+        <button type="submit">Click</button>
+    </form>
+    <div id="result" style="display:none"></div>
+    <script>
+        function validateForm() {
+            var valeuForm; result;
+            result = document.getElementById("result");
+            valeuForm = document.getElementById("username").value;
+
+            if (valeuForm=="") {
+                result.style.display = "block";
+                result.style.color = "red";
+                result.innerHTML = "Kullanıcı adı boş bırakılamaz";
+                return false;
+            }
+            else if (isNaN(valeuForm)) {
+                result.style.display = "block";
+                result.style.color = "red";
+                result.innerHTML = "Lütfen bir sayı giriniz";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Username: <input type="text" id="username" name="username" /></p>
+    <button type="button" onclick="show();">Bir tane yazdır</button>
+    <button type="button" onclick="show2();">Hepsine yazdır</button>
+    <div id="result"></div>
+    <p name="test"></p>
+    <p name="test"></p>
+    <p name="test"></p>
+    <p name="test"></p>
+    <script>
+        function show() {
+            var username, p;
+            username = document.getElementById("username").value;
+            p = document.getElementsByName("test")[0];
+            p.innerHTML = username;
+        }
+
+        function show2() {
+            var username, p;
+            username = document.getElementById("username").value;
+            p = document.getElementsByName("test");
+            for (var i = 0; i < p.length; i++) {
+                p[i].innerHTML = username;
+            }
+        }
+    </script>
+</body>
+</html>

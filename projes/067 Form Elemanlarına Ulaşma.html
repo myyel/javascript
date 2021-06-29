@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frmBegin" name="frmBegin">
+        <p>Username: <input type="text" id="username" name="username" /></p>
+        <p>Şifre:    <input type="text" id="sifre" name="sifre" /></p>
+        <button type="button" onclick="printScreen();">Click</button>
+    </form>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <script>
+        function printScreen() {
+            var valeuForm, result, valeuForm2, result2, valeuForm3, result3, valeuForm4, result4;
+            result = document.getElementById("result");
+            result2 = document.getElementById("result2");
+            result3 = document.getElementById("result3");
+            result4 = document.getElementById("result4");
+
+            valeuForm = document.forms[0].length;
+            result.innerHTML = valeuForm;
+
+            valeuForm2 = document.frmBegin.username.value;
+            result2.innerHTML = valeuForm2;
+
+            valeuForm3 = document.forms[0].elements[1].value;
+            result3.innerHTML = valeuForm3;
+
+            valeuForm4 = document.getElementById("sifre").value;
+            result4.innerHTML = valeuForm4;
+        }
+    </script>
+</body>
+</html>

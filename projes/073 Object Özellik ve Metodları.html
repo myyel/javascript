@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div><hr />
+    <div id="result2"></div><hr />
+
+    <script>
+        var result, mesaj = "", mesaj2 = "";
+        result = document.getElementById("result");
+        result2 = document.getElementById("result2");
+
+
+        function createObject(ad,soyad,yas,goz,onay) {
+            this.ad = ad;
+            this.soyad = soyad;
+            this.yas = yas;
+            this.gozRenk = goz;
+            this.onay = onay;
+            this.tamisim = function () {
+                return this.ad + " " + this.soyad
+            };
+        };
+
+        var obj = new createObject("Gungor", "Yel", "57", "blue", true);
+
+        obj.sac = "brown";
+
+        for (x in obj) {
+            mesaj += obj[x] + "<br>";
+        }
+
+        delete obj.gozRenk;
+
+        for (x in obj) {
+            mesaj2 += obj[x] + "<br>";
+        }
+        result.innerHTML = mesaj;
+        result2.innerHTML = mesaj2;
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button type="button" onclick="zamansil = setTimeout(process, 1000)">Zaman ayarla</button>
+    <button type="button" onclick="clearTimeout(zamansil)">Zaman durdur</button>
+    <button type="button" onclick="clearInterval(times)">İnterval durdur</button>
+    <p><div id="result"></div></p>
+    <p><div id="result2"></div></p>
+
+
+    <script>
+
+        var result, times,result2, times2;
+        result = document.getElementById("result");
+        result2 = document.getElementById("result2");
+        times = setInterval(process2, 1000);
+        times2 = setInterval(process3, 2000);
+
+        function process() {
+            result.innerHTML = "SetTimeout ile javascript kullanımı";
+        }
+
+        function process2() {
+            result2.innerHTML = "Merhaba";
+        }
+
+        function process3() {
+            result2.innerHTML = "";
+        }
+
+    </script>
+</body>
+</html>

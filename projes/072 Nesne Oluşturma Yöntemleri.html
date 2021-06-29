@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div><hr />
+    <div id="result2"></div><hr />
+    <div id="result3"></div>
+
+    <script>
+        var result,result2,result2;
+        result = document.getElementById("result");
+        result2 = document.getElementById("result2");
+
+        var obj = {
+            firstName: "Mehmet",
+            lastName: "Yel",
+            age: 33,
+            eyeColor: "Brown",
+            confirm: true,
+            fullName: function () {
+                return this.firstName + " " + this.lastName
+            }
+        };
+
+        var obj2 = new Object;
+        obj2.ad = "Yasemin";
+        obj2.soyad = "Yel";
+        obj2.yas = 29;
+        obj2.gozRenk = "Green";
+        obj2.onay = false;
+        obj2.tamisim = function () {
+            return this.ad + " " + this.soyad
+        }
+
+        function createObject(ad,soyad,yas,goz,onay) {
+            this.ad = ad;
+            this.soyad = soyad;
+            this.yas = yas;
+            this.gozRenk = goz;
+            this.onay = onay;
+            this.tamisim = function () {
+                return this.ad + " " + this.soyad
+            };
+        };
+
+        var obj3 = new createObject("Gungor","Yel","57","blue",true);
+
+        result.innerHTML = obj.firstName + "<br>" +
+            obj.lastName + "<br>" +
+            obj.age + "<br>" +
+            obj.eyeColor + "<br>" +
+            obj.confirm + "<br>" +
+            obj.fullName();
+
+        result2.innerHTML = obj2.ad + "<br>" +
+            obj2.soyad + "<br>" +
+            obj2.yas + "<br>" +
+            obj2.gozRenk + "<br>" +
+            obj2.onay + "<br>" +
+            obj2.tamisim();
+
+        result3.innerHTML = obj3.ad + "<br>" +
+            obj3.soyad + "<br>" +
+            obj3.yas + "<br>" +
+            obj3.gozRenk + "<br>" +
+            obj3.onay + "<br>" +
+            obj3.tamisim();
+    </script>
+</body>
+</html>
