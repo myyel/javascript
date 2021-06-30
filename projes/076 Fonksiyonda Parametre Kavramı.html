@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+
+    <script>
+        var result;
+        result = document.getElementById("result");
+        result2 = document.getElementById("result2");
+
+        function multi(x, y=1) {
+            return x * y;
+        }
+
+        function multi2(x, y) {
+            if (y == undefined) {
+                y = 1;
+            }
+            return x * y;
+        }
+
+        function show() {
+            var i, max = -Infinity;
+            for (i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        result.innerHTML = multi(2);
+        result2.innerHTML = multi2(2);
+        result3.innerHTML = show(4,52,6,78,96,421,65);
+    </script>
+</body>
+</html>

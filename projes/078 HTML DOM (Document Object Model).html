@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1 id="baslik">Javascript Başlığı</h1>
+        <a href="#">Bu bir link</a>
+        <p id="result">Bu bir paragraf</p>
+    </div>
+
+    <script>
+        var result = document.getElementById("result");
+        result.innerHTML = document.getElementById("baslik").innerHTML;
+
+    </script>
+</body>
+</html>

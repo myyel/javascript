@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div><hr />
+
+    <script>
+        var result, mesaj = "", mesaj2 = "";
+        result = document.getElementById("result");
+
+
+        function CreateObject(ad,soyad,yas,goz,onay) {
+            this.ad = ad;
+            this.soyad = soyad;
+            this.yas = yas;
+            this.gozRenk = goz;
+            this.onay = onay;
+            this.tamisim = function () {
+                return this.ad + " " + this.soyad
+            };
+        };
+
+        CreateObject.prototype.sac = "yellow";
+
+        var obj = new CreateObject("Gungor", "Yel", "57", "blue", true);
+
+        for (x in obj) {
+            mesaj += obj[x] + "<br>";
+        }
+        result.innerHTML = mesaj;
+    </script>
+</body>
+</html>

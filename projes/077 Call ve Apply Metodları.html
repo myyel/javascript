@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result"></div><hr />
+    <div id="result2"></div><hr />
+    <div id="result3"></div><hr />
+
+    <script>
+        var result, result2,result3, mesaj = "", mesaj2 = "";
+        result = document.getElementById("result");
+        result2 = document.getElementById("result2");
+        result3 = document.getElementById("result3");
+
+
+        var personid = {
+            ad : "Mehmet",
+            soyad : "Yel",
+            yas :33,
+            gozRenk : "Brown",
+            onay : true,
+            tamisim : function () {
+                return this.ad + " " + this.soyad
+            }
+        };
+
+        var personal = {
+            ad:"Mustafa",
+            soyad:"Sarı"
+        }
+
+        var personal2 = {
+            ad: "Halil",
+            soyad: "Karayiğitler"
+        }
+
+        for (x in personid) {
+            mesaj += personid[x] + "<br>";
+        }
+        result.innerHTML = mesaj;
+        result2.innerHTML = personid.tamisim.call(personal);
+        result3.innerHTML = personid.tamisim.apply(personal2);
+    </script>
+</body>
+</html>
