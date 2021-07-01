@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>Yazılım Dilleri</h2>
+        <span>Sunucu ve İstemci tabanlı diller</span>
+        <p id="result">Javascript</p>
+        <p name="resultName">JQUERY</p>
+        <p name="resultName">Angular JS</p>
+        <p name="resultName">React JS</p>
+        <p name="resultName">Vue JS</p>
+        <p id="result2">Node JS</p>
+        <p class="color1">PHP</p>
+        <p class="color">ASP.NET</p>
+        <p class="color">JSP</p>
+        <p class="color">ColdFusion</p>
+        <span class="color">Bilişim</span>
+        <h5>MYSQL</h5>
+        <h5>MYSQL</h5>
+        <h5>ORACLE</h5>
+    </div>
+
+    <script>
+        var mesaj = "", mesaj2 = "", mesaj3 = "", mesaj4 = "", mesaj5="";
+        var findElementWithId = document.getElementById("result");
+        alert(findElementWithId.innerHTML);
+
+        var findElementWithName = document.getElementsByName("resultName");
+        for (var i = 0; i < findElementWithName.length; i++) {
+            mesaj += findElementWithName[i].innerHTML + "\n";
+        }
+        alert(mesaj);
+
+        var findElementWithTagName = document.getElementsByTagName("h5");
+        for (var i = 0; i < findElementWithTagName.length; i++) {
+            mesaj2 += findElementWithTagName[i].innerHTML + "\n";
+        }
+        alert(mesaj2);
+
+        var findElementWithClass = document.getElementsByClassName("color");
+        for (var i = 0; i < findElementWithClass.length; i++) {
+            mesaj3 += findElementWithClass[i].innerHTML + "\n";
+        }
+        alert(mesaj3);
+
+        var findElementWithQuerySelector = document.querySelector(".color1");
+        mesaj4 = findElementWithQuerySelector.innerHTML;
+        alert(mesaj4);
+
+        var findElementWithQuerySelector2 = document.querySelector("#result");
+        mesaj5 = findElementWithQuerySelector2.innerHTML;
+        alert(mesaj5);
+    </script>
+</body>
+</html>
+

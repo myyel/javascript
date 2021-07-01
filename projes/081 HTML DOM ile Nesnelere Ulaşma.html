@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <p id="result"></p>
+        <p><a href="#" name="lang1" class="color">Javascript</a></p>
+        <p><a href="#" name="lang1" class="color">JQuery</a></p>
+        <p><a href="#" name="lang1" class="color">Angular JS</a></p>
+        <p><a href="#" name="lang1" class="color">REact JS</a></p>
+        <form id="frmDOM" name="frmDOM">
+            <div>
+                <label for="txt1">Value 1</label>
+                <input type="text" name="txt1" id="txt1" value="Node" class="frm-control" />
+            </div>
+            <div>
+                <label for="txt2">Value 1</label>
+                <input type="text" name="txt2" id="txt2" value="JS" class="frm-control" />
+            </div>
+        </form>
+        <button type="button" class="buton" onclick="javascript:getDOM();">Click</button>
+    </div>
+
+    <script>
+        function getDOM() {
+            var findElement, i, mesaj="",result;
+            findElement = document.forms["frmDOM"];
+            for (i = 0; i < findElement.length; i++) {
+                mesaj += findElement[i].value + "<br>";
+            }
+            result = document.querySelector("#result");
+            result.innerHTML = mesaj;
+        }
+
+        alert(document.anchors[2].innerHTML);
+
+        alert(document.body.innerHTML);
+
+        alert(document.documentElement.innerHTML);
+
+    </script>
+</body>
+</html>
