@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #username{
+            width:200px;
+            height:60px;
+            color:white;
+            background-color:crimson;
+            padding:16px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="username" name="username">Javascript</div>
+        <p><input type="text" id="pass" onfocus="test(this);" /></p>
+        <p id="result"></p>
+    </div>
+
+    <script>
+
+        var x = document.querySelector("#username");
+        var y = document.querySelector("#pass");
+
+        x.onmousemove = function () {
+            this.style.backgroundColor = "green";
+        }
+
+        x.onmouseout = function () {
+            this.style.backgroundColor = "red";
+        }
+
+        x.onmousedown = function(){
+            this.style.backgroundColor = "blue";
+        }
+
+        x.onmouseup = function(){
+            this.style.backgroundColor = "red";
+        }
+
+        x.ondblclick = function () {
+            this.style.backgroundColor = "yellow";
+        }
+
+        function test(obj) {
+            obj.style.backgroundColor = 'black';
+            obj.style.height = "100px";
+            obj.style.color = "white";
+        }
+
+        y.onkeydown = function () {
+            x.style.backgroundColor = "pink";
+        }
+
+        y.onkeyup = function () {
+            x.style.backgroundColor = "purple";
+        }
+    </script>
+</body>
+</html>

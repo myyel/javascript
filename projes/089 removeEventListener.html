@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+        <div id="text">Html DOM remove listener</div>
+        <p id="result"></p>
+        <button type="button" id="btn">Click</button>
+    </div>
+
+
+    <script>
+        var text = document.querySelector("#text");
+        text.addEventListener("mousemove", rastgele, false);
+
+        function rastgele() {
+            document.querySelector("#result").innerHTML = Math.random();
+        }
+
+        var btn = document.querySelector("#btn");
+        btn.onclick = function () {
+            text.removeEventListener("mousemove", rastgele);
+        }
+    </script>
+</body>
+</html>

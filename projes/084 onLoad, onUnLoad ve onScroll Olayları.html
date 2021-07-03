@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2 id="result" style="color:red"></h2>
+
+    <div id="demo" onscroll="myscroll();">
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+    </div>
+    
+    <script>
+        window.onload=function () {
+            var mesaj = "";
+            if (navigator.cookieEnabled == false) {
+                mesaj = "Cookie aktif değil";
+            } else {
+                mesaj = "Cookie aktif";
+            }
+            alert(mesaj);
+        }
+
+        document.querySelector("#demo").style.overflow = "scroll";
+        document.querySelector("#demo").style.height = "300px";
+        document.querySelector("#demo").style.width = "300px";
+
+        var x = 0;
+        function myscroll() {
+            document.querySelector("#result").innerHTML = x++;
+        }
+
+        window.onunload = function () {
+            alert("Güle güle");
+        }
+    </script>
+</body>
+</html>

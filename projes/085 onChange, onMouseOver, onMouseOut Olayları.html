@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <input type="text" id="username" name="username" onchange="changein();" onmouseover="over();" onmouseout="out();" />
+    </div>
+
+    <script>
+        function changein() {
+            var getinput = document.querySelector("#username");
+            getinput.value = getinput.value.toUpperCase();
+        }
+
+        function over() {
+            var element = document.querySelector("#username")
+            element.style.width = "1000px";
+            element.style.height = "100px";
+            element.style.color = "red";
+            element.style.backgroundColor = "green";
+        }
+
+        function out() {
+            var element = document.querySelector("#username")
+            element.style.width = "150px";
+            element.style.height = "20px";
+            element.style.color = "black";
+            element.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

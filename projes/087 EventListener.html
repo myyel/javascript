@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="result">Javascript ile EventListener</div>
+    <button type="button" id="btn">Click</button>
+    <button type="button" id="btn2">Click</button>
+
+
+    <script>
+        var buton = document.querySelector("#btn");
+        var buton2 = document.querySelector("#btn2");
+        var result = document.querySelector("#result");
+
+        buton.addEventListener("click", showDate);
+
+        function showDate() {
+            result.innerHTML = "<span>" + Date() + "</span>";
+        }
+
+        buton2.addEventListener("click", func1);
+        buton2.addEventListener("click", func2);
+        buton2.addEventListener("mouseover", func3);
+
+        function func1(){
+            alert("1.fonksiyon");
+        }
+
+        function func2() {
+            alert("2.fonksiyon");
+        }
+
+        function func3() {
+            buton2.style.backgroundColor = "green";
+            buton2.style.color = "white";
+        }
+    </script>
+</body>
+</html>

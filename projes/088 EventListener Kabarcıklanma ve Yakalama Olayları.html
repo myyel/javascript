@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .change{
+            background-color:#4D4924;
+            color:white;
+            border:2px solid black;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="result"></p>
+        <button type="button" id="btn">Click</button>
+    </div>
+
+    <div class="change" id="div1">
+        <p id="p1">Kabarcıklanma</p>
+    </div><br />
+
+    <div class="change" id="div2">
+        <p id="p2">Yakalama</p>
+    </div>
+
+    <script>
+        var div1, div2, p1, p2;
+        var btn = document.querySelector("#btn");
+        var result = document.querySelector("#result");
+        var p1 = document.querySelector("#p1");
+        var p2 = document.querySelector("#p2");
+        var div1 = document.querySelector("#div1");
+        var div2 = document.querySelector("#div2");
+
+        btn.addEventListener("click", myClick);
+
+        function myClick() {
+            process(52, 17);
+        }
+
+        function process() {
+            result.innerHTML = 52 * 17;
+        }
+
+        window.addEventListener("resize", function () {
+            result.innerHTML = "değişiyor";
+        })
+
+        div1.addEventListener("click", function () {
+            alert("division1");
+        },false);
+
+        p1.addEventListener("click", function () {
+            alert("paragraf1");
+        }),false;
+
+        div2.addEventListener("click", function () {
+            alert("division2");
+        },true);
+
+        p2.addEventListener("click", function () {
+            alert("paragraf2");
+        },true);
+    </script>
+</body>
+</html>

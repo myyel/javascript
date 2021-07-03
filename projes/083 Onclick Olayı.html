@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 onclick="javascript:change(this);">Click</h2>
+    </div>
+    <div>
+        <p id="result"></p>
+        <button type="button" id="buton">Hesapla</button>
+    </div>
+
+    <script>
+        var btn;
+        btn = document.querySelector("#buton");
+        btn.onclick = function () {
+            var sayi, result;
+            sayi = prompt("Bir sayı giriniz", "sayı gir");
+            result = document.querySelector("#result");
+            result.innerHTML = Math.sqrt(sayi);
+        }
+
+        function change(arg) {
+            arg.innerHTML = "Javascript";
+        }
+
+        
+    </script>
+</body>
+</html>
