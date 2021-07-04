@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="divParent">
+        <p id="p1">Angular Js</p>
+        <p id="p2">React JS</p>
+        <p id="p3">Vue JS</p>
+        <p id="p4">Node JS</p>
+    </div>
+
+    <button type="button" onclick="javascript:createElementDOM();">Element Ekle</button>
+    <button type="button" onclick="javascript:createElementDOM2();">Element Ekle(Sıralı)</button>
+    <button type="button" onclick="javascript: removeElementDOM();">Element Kaldır</button>
+    <button type="button" onclick="javascript: replaceElementDOM();">Element DEğiştir</button>
+
+    <script>
+        var parentDiv = document.querySelector("#divParent");
+
+        function createElementDOM() {
+            var p = document.createElement("p");
+            var text = document.createTextNode("Javascript");
+            p.appendChild(text);
+            parentDiv.appendChild(p);
+        }
+
+        function createElementDOM2() {
+            var p = document.createElement("p");
+            var p3 = document.querySelector("#p3");
+            var text = document.createTextNode("Javascript");
+            p.appendChild(text);
+            parentDiv.insertBefore(p, p3);
+        }
+
+        function removeElementDOM(){
+            var p3 = document.querySelector("#p3");
+            parentDiv.removeChild(p3);                              
+        }
+
+        function replaceElementDOM() {
+            var p2 = document.querySelector("#p2");
+            var text = document.createTextNode("Yenisi bu");
+            var p = document.createElement("p");
+            p.appendChild(text);
+            p2.parentNode.replaceChild(p, p2); 
+        }
+    </script>
+</body>
+</html>

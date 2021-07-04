@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title id="title">Bu bir başlıktır</title>
+</head>
+<body>
+    <h3 id="head3">Div dışındayım</h3>
+
+    <div id="divParent">
+        <h1 id="head">Javascript</h1>
+        <p id="p1">Angular Js</p>
+        <p id="p2">React JS</p>
+        <p id="p3">Vue JS</p>
+        <p id="p4">Node JS</p>
+        <p id="p5">PHP</p>
+        <p id="p6">Asp.NET</p>
+        <p id="p7">JSP</p>
+        <span id="p8">ColdFusion</span>
+    </div>
+
+    <script>
+
+        var x = document.querySelector("#divParent").parentNode;
+        x.style.color="red";
+        alert(x);
+
+        var y = document.querySelector("#divParent").children[2];
+        y.style.backgroundColor = "green";
+        alert(y.firstChild.nodeValue = "Merhaba");
+
+        var z = document.querySelector("#divParent").firstElementChild;
+        z.style.backgroundColor = "purple";
+        alert(z.textContent = "Nasılsın");
+
+        var a = document.querySelector("#divParent").lastElementChild;
+        a.style.backgroundColor = "yellow";
+        alert(a.firstChild.nodeValue);
+
+        var a = document.querySelector("#head").nextElementSibling.nextElementSibling.nextElementSibling;
+        a.style.backgroundColor = "gray";
+        alert(a.firstChild.nodeValue);
+
+        var a = document.querySelector("#p7").previousElementSibling.previousElementSibling;
+        a.style.backgroundColor = "blue";
+        alert(a.firstChild.nodeValue);
+    </script>q
+</body>
+</html>
