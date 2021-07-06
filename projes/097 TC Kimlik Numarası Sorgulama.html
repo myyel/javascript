@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="tc">TC NO</label>
+        </div>
+        <p>
+            <input type="text" id="tc" name="tc" />
+            <button type="button" id="btn">Control</button>
+        </p>
+        <p id="resultTrue" style="display:none"></p>
+        <p id="resultFalse" style="display:none"></p>
+    </form>
+
+    <script>
+        var id, btn, resultFalse, resultTrue, tek = 0, cift = 0, result=0, i;
+        id = document.querySelector("#tc");
+        btn = document.querySelector("#btn");
+        resultTrue = document.querySelector("#resultTrue");
+        resultFalse = document.querySelector("#resultFalse");
+                  
+        btn.addEventListener("click", function () {
+            resultFalse.style.display = "block";
+            resultFalse.style.color = "red";
+            resultTrue.style.display = "block";
+            resultTrue.style.color = "green";
+
+            for (i = 0; i < 9; i += 2) {
+                tek += Number(id.value[i]);
+            };
+
+            for (i = 1; i < 8; i += 2) {
+                cift += Number(id.value[i]);
+            };
+
+            for (i = 0; i < 10; i++) {
+                result += Number(id.value[i]);
+            };
+
+            if (id.value == "") {
+                resultTrue.style.display = "none";
+                resultFalse.textContent =  "Lütfen TC Kimlik No'sunu giriniz.";
+            } else if (id.value.length !== 11) {
+                resultTrue.style.display = "none";
+                resultFalse.textContent = "TC Kimlik No 11 hane olmalıdır";
+
+            } else if (isNaN(id.value)) {
+                resultTrue.style.display = "none";
+                resultFalse.textContent = "TC Kimlik No sayılardan oluşmalıdır";
+            } else if (id.value[0] == 0) {
+                resultTrue.style.display = "none";
+                resultFalse.textContent = "Tc Kimlik Numarasının ilk rakamı 0 olamaz";
+            } else if (((7 * tek) - cift) % 10 != Number(id.value[9])) {
+                resultTrue.style.display = "none";
+                resultFalse.textContent = "Geçerli bir TC Kimlik No giriniz";
+            } else if ((result % 10) != Number(id.value[10])) {
+                resultTrue.style.display = "none";
+                resultFalse.textContent = "Lütfen Geçerli bir TC Kimlik No giriniz";
+            } else {
+                resultFalse.style.display = "none";
+                resultTrue.textContent="İşlem Başarılı"
+            }
+        })
+    </script>
+</body>
+</html>

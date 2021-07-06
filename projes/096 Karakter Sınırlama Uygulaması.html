@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <form>
+            <textarea id="mesaj" name="mesaj"></textarea>
+            <p id="result"></p>
+        </form>
+    </div>
+
+
+    <script>
+        var mesaj, result, chracter = 150, chracterLength;
+        mesaj = document.querySelector("#mesaj");
+        result = document.querySelector("#result");
+
+        mesaj.onkeydown = chracterControl;
+        mesaj.onkeyup = chracterControl;
+
+        function chracterControl() {
+            chracterLength = this.value.length;
+            if (chracter >= chracterLength) {
+                var lastLength = chracter - chracterLength;
+                result.textContent = lastLength + " karakter kaldı";
+            } else {
+                this.value = this.value.substr(0, chracter);
+            }
+        }
+    </script>
+</body>
+</html>
