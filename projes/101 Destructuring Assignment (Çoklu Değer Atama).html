@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector("#result");
+        let langs = [
+            "Javascript",
+            "Angular Js",
+            "React JS",
+            "Vue JS",
+            "Node Js",
+            "PHP",
+            "ASP.NET",
+            "JSP",
+            "ColdFusion",
+            "HTML5",
+            "CSS3"
+        ];
+
+        let l0 = langs[0];
+        let l1 = langs[1];
+        let l2 = langs[2];
+        let l3 = langs[3];
+        let l4 = langs[4];
+
+        result.innerHTML =
+            l0 + "<br>" +
+            l1 + "<br>" +
+            l2 + "<br>" +
+            l3 + "<br>" +
+            l4 + "<hr>";
+
+        // or
+
+        let [la0, , la2, la3, , la5, , la7] = langs;
+
+        result.innerHTML +=
+            la0 + "<br>" +
+            la2 + "<br>" +
+            la3 + "<br>" +
+            la5 + "<br>" +
+            la7 + "<br>";    
+    </script>
+</body>
+</html>

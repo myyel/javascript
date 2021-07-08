@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        class person {
+            constructor(p1, p2, p3) {
+                this.Name = p1;
+                this.Surname = p2;
+                this.age = p3;
+            }
+
+            get FirstName() {
+                return this.Name;
+            }
+
+            set FirstName(x) {
+                this.Name = x;
+            }
+
+            get Soyisim() {
+                return this.Surname;
+            }
+
+            set Soyisim(y) {
+                this.Surname = y;
+            }
+
+            get Yas() {
+                return this.age;
+            }
+
+            set Yas(z) {
+                this.age = z;
+            }
+            Mesaj() {
+                return "Merhaba Dünya";
+            }
+        }
+
+        var myObject = new person("Mehmet", "Yel", 25);
+        document.querySelector("#result").innerHTML = myObject.FirstName + "<hr>";
+        myObject.FirstName = "Yasemin";
+        document.querySelector("#result").innerHTML += myObject.FirstName + "<hr>";
+
+        class Engineer extends person {
+            constructor(p1, p2, p3, p4) {
+                /*this.Name = p1;
+                this.Surname = p2;
+                this.age = p3;*/
+                super(p1, p2, p3);
+                this.weight = p4;
+            }
+
+            get Kilo() {
+                return this.weight;
+            }
+
+            set Kilo(z) {
+                this.weight = z;
+            }
+
+            MesajAlert() {
+                alert(super.Mesaj());
+            }
+        }
+
+
+        var engObject = new Engineer("Güngör", "Yel", 56, 70);
+        document.querySelector("#result").innerHTML +=
+            engObject.FirstName + "<br>" +
+            engObject.Soyisim + "<br>" +
+            engObject.Yas + "<br>" +
+            engObject.Kilo + "<hr>";
+
+        engObject.FirstName = "Neriman";
+        engObject.Soyisim = "Ünsal";
+        engObject.Yas = 53;
+        engObject.Kilo = 65;
+
+        document.querySelector("#result").innerHTML +=
+            engObject.FirstName + "<br>" +
+            engObject.Soyisim + "<br>" +
+            engObject.Yas + "<br>" +
+            engObject.Kilo + "<br>";
+
+        engObject.MesajAlert();
+    </script>
+</body>
+</html>

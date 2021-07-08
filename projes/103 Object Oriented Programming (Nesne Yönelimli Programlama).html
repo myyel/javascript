@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="result1"></p>
+
+    <script>
+        "use strict";
+        function person(par1, par2, par3) {
+            this.Name = par1;
+            this.Surname = par2;
+            this.age = par3;
+            this.getName = function () {
+                return this.Name + " " + this.Surname;
+            };
+
+        };
+
+        var myObject = new person("Mehmet", "Yel", 25);
+        document.querySelector("#result").innerHTML = myObject.getName()+"<hr>";
+
+        class person2{
+            constructor(p1, p2, p3) {
+                this.Name = p1;
+                this.Surname = p2;
+                this.age = p3;
+            }
+
+            getName() {
+                return this.Name + " " + this.Surname;
+            }
+
+            setName(name) {
+                this.Name = name;
+            }
+        }
+
+        var myObject2 = new person2("Mehmet", "Yel", 25);
+        myObject2.setName("Yasemin");
+        document.querySelector("#result").innerHTML += myObject2.getName();
+    </script>
+</body>
+</html>

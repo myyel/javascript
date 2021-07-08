@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        "use strict"
+        let x = 7;
+        if (x == 7) {
+            let mesaj = "let değişkenleri birden fazla declare edilmesini engeller ve tanımlandığı blok içerisinde çalışmasını sağlar";
+            document.querySelector("#result").innerHTML = "if içindeki deger:" + mesaj+"<br>";
+        }
+        document.querySelector("#result").innerHTML = "if dışındaki deger:" + mesaj + "<br>";
+    </script>
+</body> 
+</html>
