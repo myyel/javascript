@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        "use strict";
+
+        let langs1 = [
+            "PHP",
+            "ASP.NET",
+            "JSP",
+            "ColdFusion",
+            "NodeJS",
+            "Javascript"            
+        ];
+
+        let langs2 = [
+            "Angular JS",
+            "React JS",
+            "Vue Js",
+            "Bootstrap4",
+            "CSS3",
+            "HTML5"
+        ];
+
+        let joinArray = [...langs1, ...langs2];
+
+        console.log(joinArray);
+
+        function sum(x, y, z) {
+            return x + y + z;
+        }
+
+        let numbers = [7, 6, 4];
+
+        document.querySelector("#result").innerHTML = sum(...numbers);
+    </script>
+</body>
+</html>

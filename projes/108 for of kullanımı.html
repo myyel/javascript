@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        "use strict";
+
+        let person = { ad: "Mehmet", soyad: "yel", yas: 33 };
+
+        for (let i in person) {
+            document.querySelector("#result").innerHTML += person[i]+"<br>";
+        };
+
+        document.querySelector("#result").innerHTML += "<hr>";
+
+        let text = "Merhaba dünya";
+
+        for (let i of text) {
+            document.querySelector("#result").innerHTML += i + "<br>";
+        }
+    </script>
+</body>
+</html>
