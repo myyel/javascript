@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        let m = new Map();
+        m.set("mesaj","Javascript");
+        m.set("show","Map ve WeakMap dersleri");
+
+        document.querySelector("#result").innerHTML = m.has("mesaj") + "<br>";
+        document.querySelector("#result").innerHTML += m.get("mesaj") + "<br>";
+        m.delete("mesaj");
+        document.querySelector("#result").innerHTML += m.get("mesaj") + "<br>";
+        m.clear();
+
+        let n = new WeakMap();
+        n.set("mesaj", "Javascript");
+        n.set("show", "Map ve WeakMap dersleri");
+    </script>
+</body>
+</html>

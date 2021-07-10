@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        let dataSet = new Set();
+        dataSet.add("Javascript");
+        dataSet.add("Ecmascript");
+        dataSet.add("Eğitim setine");
+        dataSet.add("Hoşgeldiniz");
+        dataSet.add("Bu derste set nesnesini işleyeceğiz");
+
+        document.querySelector("#result").innerHTML = dataSet.has("Javascript") + "<br>";
+        document.querySelector("#result").innerHTML += dataSet.size+"<br>";
+        dataSet.delete("Hoşgeldiniz");
+        document.querySelector("#result").innerHTML += dataSet.size+"<br>";
+        dataSet.clear();
+        document.querySelector("#result").innerHTML += dataSet.size + "<br>";
+    </script>
+</body>
+</html>
