@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        "use strict";
+
+        let text = "Javascript Ecmascript ile gelen yeni string methodları. Javascript Ecmascript 6 ile nesne yönelimli programlamaya" +
+            "adım atmış oldu. Artık class, inheritance javascript'te mümkün.";
+
+        let txt = "Node JS";
+
+        document.querySelector("#result").innerHTML = txt.repeat(4) + "<br>";
+
+        document.querySelector("#result").innerHTML += text.startsWith("Javascript") ? "Aradığınız kelime cümle başında geçiyor" + "<br>" :
+            "Aradığınız kelime cümle başında geçmiyor" + "<br>";
+
+        document.querySelector("#result").innerHTML += text.startsWith("Ecmascript", 11) ? "Aradığınız kelime cümle başında geçiyor" + "<br>":
+            "Aradığınız kelime cümle başında geçmiyor" + "<br>";
+
+        document.querySelector("#result").innerHTML += text.endsWith("mümkün") ? "Aradığınız kelime cümle sonunda geçiyor" + "<br>" :
+            "Aradığınız kelime cümle sonunda geçmiyor" + "<br>";
+
+        document.querySelector("#result").innerHTML += text.includes("nesne") ? "Aradığınız kelime cümlede geçiyor" + "<br>" :
+            "Aradığınız kelime cümlede geçmiyor" + "<br>";
+
+        if (Number.isFinite(6) ? document.querySelector("#result").innerHTML += "bu bir sayı<br>" :
+            document.querySelector("#result").innerHTML += "bu bir sayı değil<br>");
+
+        if (Number.isNaN(6) ? document.querySelector("#result").innerHTML += "bu bir sayı<br>" :
+            document.querySelector("#result").innerHTML += "bu bir sayı değil<br>");
+
+        if (Number.isInteger(6) ? document.querySelector("#result").innerHTML += "bu bir sayı<br>" :
+            document.querySelector("#result").innerHTML += "bu bir sayı değil<br>");
+
+        if (Number.isSafeInteger(6) ? document.querySelector("#result").innerHTML += "bu bir sayı<br>" :
+            document.querySelector("#result").innerHTML += "bu bir sayı değil<br>");
+
+        document.querySelector("#result").innerHTML +=
+            Number.EPSILON + "<br>" +
+            Number.MIN_SAFE_INTEGER + "<br>" +
+            Number.MAX_SAFE_INTEGER + "<br>";
+    </script>
+</body>
+</html>

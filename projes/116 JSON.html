@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+
+        let obj = {
+            "firstName": "Mehmet",
+            "lastName": "Yel"
+        };
+
+        let sendJSON = JSON.stringify(obj);
+        window.location = "Json.cshtml?Json=" + sendJSON;
+
+        let takeJSON = '{'+
+            '"firstName": "Mehmet",'+
+            '"lastName": "Yel"'+
+            '}';
+
+        let obj2 = JSON.parse(takeJSON);
+        document.querySelector("#result").innerHTML = obj2.firstName + "<br>" + obj2.lastName;
+
+        let obj3 = {
+            "firstName": "Mehmet",
+            "lastName": "Yel"
+        };
+
+        let Json = JSON.stringify(obj3);
+        localStorage.setItem("depoJson", Json);
+
+        let txt = localStorage.getItem("depoJson");
+        let depoObj = JSON.parse(txt);
+
+        document.querySelector("#result").innerHTML = depoObj.firstName + "<br>" + depoObj.lastName;
+    </script>
+</body>
+</html>
