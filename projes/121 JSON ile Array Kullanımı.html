@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+
+        let obj = {
+            "firstName": "Mehmet",
+            "lastName": null,
+            "age": 25,
+            "isLife": true,
+            "info": [57,170,"brown"]            
+        };
+        obj.info[2] = "yellow";
+        delete obj.info[0];
+
+        for (let item in obj) {
+            if (item == "info") {
+                for (var item2 = 0; item2 < obj.info.length; item2++) {
+                    document.querySelector("#result").innerHTML += obj.info[item2] + "<br>";
+                }
+            } else {
+                document.querySelector("#result").innerHTML += obj[item] + "<br>";
+            }
+        };
+
+    </script>
+</body>
+</html>

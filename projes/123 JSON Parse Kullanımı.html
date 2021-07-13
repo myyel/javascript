@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="run();">Click</button>
+
+    <script>
+        "use strict";
+
+        function run() {
+            let txt, obj;
+            txt = '{"firtsName":"Mehmet","lastName":"Yel", "birthday":"1987-05-29"}';
+            obj = JSON.parse(txt);
+            obj.birthday = new Date(obj.birthday);
+            document.querySelector("#result").innerHTML = obj.birthday.getDay() + "."+obj.birthday.getMonth()+"."+obj.birthday.getFullYear();
+        }
+    </script>
+</body>
+</html>
